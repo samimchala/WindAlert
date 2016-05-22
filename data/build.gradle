@@ -52,9 +52,7 @@ dependencies {
     def dataDependencies = rootProject.ext.dataDependencies
 
     compile dataDependencies.retrofit
-
-    compile dataDependencies.autoValue
-    apt     dataDependencies.autoValue
+    compile dataDependencies.retrofitJacksonConverter
 
     apt dataDependencies.daggerCompiler
     compile dataDependencies.dagger

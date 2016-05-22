@@ -34,7 +34,8 @@ ext {
     supportAppCompatVersion = '22.2.1'
     gsonVersion = "1.7.2"
     retrofitVersion = "1.9.0"
-    autoValueVersion = "1.2"
+    retrofitConverterJacksonVersion = "1.9.0"
+    jacksonVersion = "2.4.3"
 
     jUnitVersion = "4.12"
     mockitoVersion = "1.10.19"
@@ -58,12 +59,13 @@ ext {
 
     dataDependencies = [
             retrofit:           "com.squareup.retrofit:retrofit:${retrofitVersion}",
+            retrofitJacksonConverter:           "com.squareup.retrofit:converter-jackson:${retrofitConverterJacksonVersion}",
+            jacksonConverter:           "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
             daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
             dagger:             "com.google.dagger:dagger:${daggerVersion}",
             rxJava:             "io.reactivex:rxjava:${rxJavaVersion}",
             javaxAnnotation:    "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
             supportAppCompat:   "com.android.support:appcompat-v7:${supportAppCompatVersion}",
-            autoValue:          "com.google.auto.value:auto-value:${autoValueVersion}"
     ]
 
     dataTestDependencies = [
